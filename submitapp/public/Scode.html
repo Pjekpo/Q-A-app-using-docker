@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Declares this document is HTML5 -->
+<html lang="en">
+<!-- Opens the HTML document and sets the language to English -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- Sets the character encoding to UTF-8 to support special characters -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Ensures the layout scales correctly on different screen sizes (responsive design) -->
+
+  <title>Submit a Question</title>
+  <!-- The title shown in the browser tab -->
+
+  <link rel="stylesheet" href="Scode.css">
+  <!-- Links to an external CSS file to style this page -->
+</head>
+
+<body>
+  <!-- Body contains all the visible content on the page -->
+
+  <div class="form-container">
+    <!-- Wrapper div for styling and layout -->
+
+    <h1>Submit a New Question</h1>
+    <!-- Main heading for the page -->
+
+    <form id="questionForm">
+      <!-- Form element where users will input question details -->
+
+      <div class="form-group">
+        <!-- Grouping element for question input -->
+        <label for="question">Question:</label>
+        <!-- Label for the question input box -->
+        <input type="text" id="question" name="question" required>
+        <!-- Text input for entering the question; 'required' means it must be filled before submission -->
+      </div>
+
+      <div class="form-group">
+        <!-- Grouping for answer options -->
+        <label>Answers:</label>
+        <!-- Label for the group of answer inputs -->
+
+        <!-- Each block below is a combination of a radio button and text input for an answer -->
+
+        <div>
+          <input type="radio" name="correctAnswer" value="0" required>
+          <!-- Radio button to mark this as the correct answer -->
+          <input type="text" id="answer1" name="answer1" required placeholder="Correct Answer">
+          <!-- Text input for answer option 1, marked with a placeholder as the correct one -->
+        </div>
+
+        <div>
+          <input type="radio" name="correctAnswer" value="1">
+          <!-- Radio for answer 2 -->
+          <input type="text" id="answer2" name="answer2" required>
+          <!-- Input for answer 2 -->
+        </div>
+
+        <div>
+          <input type="radio" name="correctAnswer" value="2">
+          <!-- Radio for answer 3 -->
+          <input type="text" id="answer3" name="answer3" required>
+          <!-- Input for answer 3 -->
+        </div>
+
+        <div>
+          <input type="radio" name="correctAnswer" value="3">
+          <!-- Radio for answer 4 -->
+          <input type="text" id="answer4" name="answer4" required>
+          <!-- Input for answer 4 -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- Grouping for selecting a category from a dropdown -->
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+          <!-- Dropdown list of categories will be populated by JavaScript -->
+          <option value="" disabled selected>Select Category</option>
+          <!-- Default placeholder option -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <!-- Optional field to allow the user to add a brand-new category -->
+        <label for="newCategory">Or Add New Category:</label>
+        <input type="text" id="newCategory" name="newCategory">
+      </div>
+
+      <button type="submit">Submit Question</button>
+      <!-- Submit button to send the form data -->
+    </form>
+  </div>
+
+  <script src="Scode.js"></script>
+  <!-- Link to the external JavaScript file that will handle form functionality -->
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Qcode.css">
+    <title>Random Question Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Get a Random Question</h2>
+        <label for="category">Choose a category:</label>
+        <select id="category">
+            <!-- dynamic categories -->
+        </select>
+        <button id="requestBtn">Get Question</button>
+        <p id="question">Your question will appear here.</p>
+        <div id="answers">
+            <button class="answer-btn" style="display:none;"></button>
+            <button class="answer-btn" style="display:none;"></button>
+            <button class="answer-btn" style="display:none;"></button>
+            <button class="answer-btn" style="display:none;"></button>
+        </div>
+    </div>
+    <script src="Qcode.js"></script>
+</body>
+</html>

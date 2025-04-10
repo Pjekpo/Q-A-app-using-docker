@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: data
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: Pj41142$
+      MYSQL_HOST: mysql-db
+    ports:
+      - "4002:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  submitapp:
+    build:
+      context: ./submitapp
+      dockerfile: Dockerfile
+    container_name: submitapp
+    image: submitapp
+    ports:
+      - "4200:3200"  
+
+  questionapp:
+    build:
+      context: ./questionapp
+      dockerfile: Dockerfile
+    container_name: questionapp
+    image: questionapp
+    ports:
+      - "4000:3000"  
+
+volumes:
+  mysql_data:
